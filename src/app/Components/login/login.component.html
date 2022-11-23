@@ -1,0 +1,55 @@
+<div style="height: 100vh">
+  <div class="container mt-4 pt-5 px-4 adjust-width shadow">
+    <h3
+      [class]="
+        this.darkMode ? 'text-center text-light' : 'text-center text-secondary'
+      "
+    >
+      Login in to your <span class="text-logo">rain</span> account
+    </h3>
+
+    <form (ngSubmit)="this.loginHandler()">
+      <div class="mb-3">
+        <label
+          for="exampleFormControlInput1"
+          [class]="this.darkMode ? 'form-label text-light' : 'form-label'"
+          >Email address</label
+        >
+        <input
+          type="text"
+          [(ngModel)]="this.formData.email"
+          [class]="
+            this.darkMode ? 'form-control bg-dark text-light' : 'form-control'
+          "
+          name="email"
+          id="exampleFormControlInput1"
+          placeholder="name@example.com"
+        />
+      </div>
+      <div class="mb-3">
+        <label
+          for="exampleFormControlInput1"
+          [class]="this.darkMode ? 'form-label text-light' : 'form-label'"
+          >Password</label
+        >
+        <input
+          type="email"
+          id="exampleFormControlInput1"
+          [(ngModel)]="this.formData.password"
+          name="password"
+          [class]="
+            this.darkMode ? 'form-control bg-dark text-light' : 'form-control'
+          "
+          placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;"
+        />
+      </div>
+      <input type="submit" value="Login" class="btn btn-primary" />
+    </form>
+
+    <div style="margin: auto; width: fit-content; height: 30px">
+      <a href="" [class]="this.darkMode ? 'text-light' : ''"
+        >New to rain? Create your account</a
+      >
+    </div>
+  </div>
+</div>

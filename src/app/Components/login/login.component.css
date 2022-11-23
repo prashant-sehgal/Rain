@@ -1,0 +1,13 @@
+.adjust-width {
+  width: 30%;
+  min-width: 480px;
+}
+
+.text-logo {
+  color: #296bff;
+}
+
+.shadow {
+  border: 1px black;
+  border-radius: 10px;
+}

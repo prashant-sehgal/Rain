@@ -1,0 +1,17 @@
+.logo {
+  color: #296bff;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 30px;
+}
+
+.hover-primary:hover {
+  color: #296bff;
+}
+
+.img-cart {
+  width: 20px;
+}
+
+.active-custome {
+  color: #296bff;
+}

@@ -1,0 +1,34 @@
+<div [class]="this.darkMode ? 'container mt-4' : 'container mt-4'">
+  <div class="row" *ngIf="this.products.length > 0">
+    <div
+      [class]="
+        this.darkMode
+          ? 'card column card-custome mx-2 my-2 p-3 bg-dark'
+          : 'card column card-custome mx-2 my-2 p-3'
+      "
+      style="width: 18rem"
+      *ngFor="let product of this.products"
+    >
+      <a [routerLink]="'products/' + product.slug" class="card-link">
+        <img
+          [src]="this.apiHost + '/img/products/' + product.images[0]"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 [class]="this.darkMode ? 'card-title text-light' : 'card-title'">
+            {{ product.name }}
+          </h5>
+          <p [class]="this.darkMode ? 'card-text subtext-dark' : 'card-text'">
+            {{ this.limitString(product.description) }}
+          </p>
+        </div>
+      </a>
+    </div>
+  </div>
+  <!-- <ng-template #loading>
+    <div class="loading">
+      <img src="/assets/loading.gif" class="loading-gif" />
+    </div>
+  </ng-template> -->
+</div>
